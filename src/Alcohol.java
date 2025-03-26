@@ -4,10 +4,10 @@ public class Alcohol {
     private String name;
     private String type;
     private double price;
-    private int volume;
+    private double volume;
     private int quantity;
 
-    public Alcohol(String name, String type, double price, int volume, int quantity){
+    public Alcohol(String name, String type, double price, double volume, int quantity){
 
         this.name = name;
         this.type = type;
@@ -49,7 +49,7 @@ public class Alcohol {
         this.quantity = quantity;
     }
 
-    public int getVolume() {
+    public double getVolume() {
         return volume;
     }
 
