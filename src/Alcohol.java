@@ -1,20 +1,30 @@
 
 
 public class Alcohol {
+    private String id;
     private String name;
     private String type;
     private double price;
     private double volume;
     private int quantity;
 
-    public Alcohol(String name, String type, double price, double volume, int quantity){
+    public Alcohol(String id, String name, String type, double price, double volume, int quantity){
 
+        this.id = id;
         this.name = name;
         this.type = type;
         this.price = price;
         this.volume = volume;
         this.quantity = quantity;
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -59,6 +69,6 @@ public class Alcohol {
 
     @Override
     public String toString() {
-        return name + " (" + type + ") - $" + price + ", " + volume + "ml, Qty: " + quantity;
+        return "ID: " + id + " | " + name + " (" + type + ") - $" + price + ", " + volume + "ml, Qty: " + quantity;
     }
 }

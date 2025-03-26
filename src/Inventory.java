@@ -8,18 +8,18 @@ public class Inventory {
     }
 
     public void addItem(Alcohol item){
-        inventory.put(item.getName(), item);
+        inventory.put(item.getId(), item);
     }
 
-    public Alcohol getItem(String name){
-        return inventory.get(name);
+    public Alcohol getItem(String id){
+        return inventory.get(id);
     }
-    public void removeItem(String name){
-        inventory.remove(name);
+    public void removeItem(String id){
+        inventory.remove(id);
     }
 
-    public void updateQuantity(String name, int quantity){
-        Alcohol alcohol = inventory.get(name);
+    public void updateQuantity(String id, int quantity){
+        Alcohol alcohol = inventory.get(id);
         if(alcohol != null){
             alcohol.setQuantity(quantity);
         }
@@ -32,6 +32,9 @@ public class Inventory {
         for(Alcohol alcohol: inventory.values()){
             System.out.println(alcohol);
         }
+    }
+    public boolean idExists(String id) {
+        return inventory.containsKey(id);
     }
 
 
