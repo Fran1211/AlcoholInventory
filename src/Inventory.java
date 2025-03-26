@@ -19,11 +19,19 @@ public class Inventory {
     }
 
     public void updateQuantity(String name, int quantity){
-        inventory.get(name).setQuantity(quantity);
+        Alcohol alcohol = inventory.get(name);
+        if(alcohol != null){
+            alcohol.setQuantity(quantity);
+        }
     }
-
-    public search(){
-        Alcohol item = inventory.get(name);
+    public void listAllItems(){
+        if(inventory.isEmpty()){
+            System.out.println("Inventory is empty");
+            return;
+        }
+        for(Alcohol alcohol: inventory.values()){
+            System.out.println(alcohol);
+        }
     }
 
 
