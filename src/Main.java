@@ -17,6 +17,7 @@ public class Main {
             System.out.println("5. Search by ID");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
+
             String choice = sc.nextLine();
 
             switch (choice) {

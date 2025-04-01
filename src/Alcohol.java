@@ -9,7 +9,6 @@ public class Alcohol {
     private int quantity;
 
     public Alcohol(String id, String name, String type, double price, double volume, int quantity){
-
         this.id = id;
         this.name = name;
         this.type = type;
